@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="index.js"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              dark: "#292C30",
+              "dark-lighter": "#323538",
+              primary: "#2EAD6B",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="w-screen h-screen bg-gray-700 flex justify-center items-center">
+    <div class="w-[280px] h-[600px] pl-6 pr-5 bg-dark rounded-3xl">
+      <div class="w-full text-right mt-32 text-xl text-white">
+        125 <span class="text-primary">*</span> 20
+      </div>
+      <div class="w-full text-right mt-3 text-4xl text-white">2,500</div>
+      <div class="w-49 h-80 mt-8 rounded [&>div]:mt-1.5">
+        <div
+          class="flex justify-between [&>button]:w-[3.35rem] [&>button]:h-12"
+        >
+          <button
+            class="bg-dark-lighter hover:bg-blue-700 text-white py-3 px-3.5 rounded"
+          >
+            mc
+          </button>
+          <button
+            class="bg-dark-lighter hover:bg-blue-700 text-white py-3 px-3.5 rounded"
+          >
+            m+
+          </button>
+          <button
+            class="bg-dark-lighter hover:bg-blue-700 text-white py-3 px-3.5 rounded"
+          >
+            m-
+          </button>
+          <button
+            class="bg-dark-lighter hover:bg-blue-700 text-white py-3 px-3.5 rounded"
+          >
+            mr
+          </button>
+        </div>
+
+        <div
+          class="flex justify-between [&>button]:w-[3.35rem] [&>button]:h-12"
+        >
+          <button class="bg-dark-lighter hover:bg-blue-700 text-white rounded">
+            C
+          </button>
+          <button class="bg-dark-lighter hover:bg-blue-700 text-white rounded">
+            X
+          </button>
+          <button class="bg-primary hover:bg-blue-700 text-white rounded">
+            /
+          </button>
+          <button class="bg-primary hover:bg-blue-700 text-white rounded">
+            *
+          </button>
+        </div>
+
+        <div
+          class="flex justify-between [&>button]:w-[3.35rem] [&>button]:h-12"
+        >
+          <button class="bg-dark-lighter hover:bg-blue-700 text-white rounded">
+            7
+          </button>
+          <button class="bg-dark-lighter hover:bg-blue-700 text-white rounded">
+            8
+          </button>
+          <button class="bg-dark-lighter hover:bg-blue-700 text-white rounded">
+            9
+          </button>
+          <button class="bg-primary hover:bg-blue-700 text-white rounded">
+            -
+          </button>
+        </div>
+
+        <div
+          class="flex justify-between [&>button]:w-[3.35rem] [&>button]:h-12"
+        >
+          <button class="bg-dark-lighter hover:bg-blue-700 text-white rounded">
+            4
+          </button>
+          <button class="bg-dark-lighter hover:bg-blue-700 text-white rounded">
+            5
+          </button>
+          <button class="bg-dark-lighter hover:bg-blue-700 text-white rounded">
+            6
+          </button>
+          <button class="bg-primary hover:bg-blue-700 text-white rounded">
+            +
+          </button>
+        </div>
+
+        <div
+          class="flex justify-between [&>button]:w-[3.35rem] [&>button]:h-12"
+        >
+          <button class="bg-dark-lighter hover:bg-blue-700 text-white rounded">
+            1
+          </button>
+          <button class="bg-dark-lighter hover:bg-blue-700 text-white rounded">
+            2
+          </button>
+          <button class="bg-dark-lighter hover:bg-blue-700 text-white rounded">
+            3
+          </button>
+          <button class="bg-primary hover:bg-blue-700 text-white rounded">
+            =
+          </button>
+        </div>
+
+        <div
+          class="flex justify-between [&>button]:w-[3.35rem] [&>button]:h-12"
+        >
+          <button class="bg-dark-lighter hover:bg-blue-700 text-white rounded">
+            %
+          </button>
+          <button class="bg-dark-lighter hover:bg-blue-700 text-white rounded">
+            0
+          </button>
+          <button class="bg-dark-lighter hover:bg-blue-700 text-white rounded">
+            ,
+          </button>
+          <button class="bg-primary hover:bg-blue-700 text-white rounded">
+            =
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
