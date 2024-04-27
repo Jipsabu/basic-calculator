@@ -1,7 +1,7 @@
 const todoList = document.querySelector("#list");
 
 const newNode = document.createElement("li");
-newNode.innerHTML = "tap kho ca voi rau";
+newNode.innerHTML = "abc";
 
 todoList.appendChild(newNode);
 
