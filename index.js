@@ -1,9 +1,30 @@
-const todoList = document.querySelector("#list");
+const input = document.querySelector('input');
+const button = document.querySelector('button');
+const todoList = document.querySelector('#list');
 
-const newNode = document.createElement("li");
-newNode.innerHTML = "abc";
 
-todoList.appendChild(newNode);
+
+button.addEventListener('click', e => {
+  // console.log(e);
+  console.dir(input);
+  console.log(input.value);
+  const newNode = document.createElement('li');
+  newNode.innerHTML = input.value;
+  todoList.appendChild(newNode);
+  input.value = '';
+});
+
+input.addEventListener('keydown', e => {
+  console.log(e);
+  console.log(e.key);
+  if (e.key === 'Enter') {
+    const newNode = document.createElement('li');
+    newNode.innerHTML = input.value;
+    todoList.appendChild(newNode);
+    input.value = '';
+  }
+});
+
 
 /* 
 1. DOM input
