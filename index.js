@@ -1,41 +1,57 @@
 const todoList = document.querySelector("#list");
-const input = document.querySelector("input");
+const input = document.querySelector("#addTodoInput");
 const addTodoBtn = document.querySelector(".addBtn");
 const editTodoBtn = document.querySelector(".editBtn");
-const addInputEdit = document.querySelector("#addInput");
 
-const addTodo = (value)=>{
+const addTodo = value => {
   const newNode = document.createElement("li");
   newNode.innerText = value;
   todoList.appendChild(newNode);
+};
 
-}
-
-const resetInput= () =>{
+const resetInput = () => {
   input.value = "";
-}
+};
 
-addTodoBtn.addEventListener("click", (e) => {
-  const value1 = input.value
+addTodoBtn.addEventListener("click", e => {
+  const value1 = input.value;
   addTodo(value1);
   resetInput();
-})
+});
 
-input.addEventListener("keydown", e=>{
-  if(e.key === "Enter"){
-    const value = input.value
+input.addEventListener("keydown", e => {
+  if (e.key === "Enter") {
+    const value = input.value;
     addTodo(value);
     resetInput();
   }
-})
+});
 
-editTodoBtn.addEventListener("click", (e) =>{
-  const el = document.querySelector("p")
-  const toggleClass = (el, "#addinput") 
-  el.classList.toggle("#addinput");
-  console.log(e);
-})
+const todoListData = [
+  {
+    id: 1,
+    content: "Hoc Javascript",
+  },
+  {
+    id: 2,
+    content: "Hoc React",
+  },
+  {
+    id: 3,
+    content: "Hoc lam viec nha",
+  },
+];
 
+
+editTodoBtn.addEventListener("click", e => {
+  const el = document.querySelector("p");
+  const addInputEdit = document.querySelectorAll("#addInput");
+  console.log(addInputEdit);
+
+  el.classList.toggle("hidden");
+  addInputEdit.classList.toggle("hidden");
+  addInputEdit.value = el.innerText;
+});
 
 /* 
 1. DOM input
