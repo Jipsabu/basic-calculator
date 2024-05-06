@@ -1,29 +1,40 @@
-const input = document.querySelector('input');
-const button = document.querySelector('button');
-const todoList = document.querySelector('#list');
+const todoList = document.querySelector("#list");
+const input = document.querySelector("input");
+const addTodoBtn = document.querySelector(".addBtn");
+const editTodoBtn = document.querySelector(".editBtn");
+const addInputEdit = document.querySelector("#addInput");
 
-
-
-button.addEventListener('click', e => {
-  // console.log(e);
-  console.dir(input);
-  console.log(input.value);
-  const newNode = document.createElement('li');
-  newNode.innerHTML = input.value;
+const addTodo = (value)=>{
+  const newNode = document.createElement("li");
+  newNode.innerText = value;
   todoList.appendChild(newNode);
-  input.value = '';
-});
 
-input.addEventListener('keydown', e => {
-  console.log(e);
-  console.log(e.key);
-  if (e.key === 'Enter') {
-    const newNode = document.createElement('li');
-    newNode.innerHTML = input.value;
-    todoList.appendChild(newNode);
-    input.value = '';
+}
+
+const resetInput= () =>{
+  input.value = "";
+}
+
+addTodoBtn.addEventListener("click", (e) => {
+  const value1 = input.value
+  addTodo(value1);
+  resetInput();
+})
+
+input.addEventListener("keydown", e=>{
+  if(e.key === "Enter"){
+    const value = input.value
+    addTodo(value);
+    resetInput();
   }
-});
+})
+
+editTodoBtn.addEventListener("click", (e) =>{
+  const el = document.querySelector("p")
+  const toggleClass = (el, "#addinput") 
+  el.classList.toggle("#addinput");
+  console.log(e);
+})
 
 
 /* 

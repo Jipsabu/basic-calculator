@@ -4,18 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <script defer src="https://cdn.tailwindcss.com"></script>
     <script src="index.js" defer></script>
   </head>
   <body>
-    <h1>My todo list</h1>
-    <ul id="list" class="unorderList">
-      <li class="itemlist">Lam viec nha</li>
-      <li>Lam viec nha</li>
-      <li>Get the milk</li>
-      <li>Lam viec nha</li>
-      <!-- Dummy data -->
-    </ul>
-    <input type="text" />
-    <button>Add task</button>
+    <div class="p-8 border border-black w-[40%]">
+      <h1 class="text-lg font-semibold">My todo list</h1>
+      <ul id="list" class="unorderList">
+        <div class="flex justify-between">
+          <p>Hoc Javascript</p>
+          <input  id="addInput" class="border border-black h-[100%] hidden"  type="text">
+          <button class="editBtn">Edit</button>
+        </div>
+        <li>Get the milk</li>
+        <li>Lam viec nha</li>
+        <!-- Dummy data -->
+      </ul>
+      <input class="border border-black" type="text" />
+      <button class="addBtn">Add task</button>
+    </div>
   </body>
 </html>
