@@ -1,26 +1,39 @@
-const todoList = document.querySelector("#list");
-const input = document.querySelector("#addTodoInput");
-const addTodoBtn = document.querySelector(".addBtn");
-const editTodoBtn = document.querySelector(".editBtn");
+const todoList = document.querySelector('#list');
+const input = document.querySelector('#addTodoInput');
+const addTodoBtn = document.querySelector('.addBtn');
+const editTodoBtn = document.querySelector('.editBtn');
 
 const addTodo = value => {
-  const newNode = document.createElement("li");
-  newNode.innerText = value;
-  todoList.appendChild(newNode);
+  const div = document.createElement('div');
+  div.classList.add('flex', 'justify-between');
+
+  const p = document.createElement('p');
+  p.innerText = value;
+  div.appendChild(p);
+
+  const input = document.createElement('input');
+  input.classList.add('border', 'border-black', 'h-[100%]', 'hidden');
+  div.appendChild(input);
+
+  const button = document.createElement('button');
+  input.classList.add('editBtn');
+  button.innerText = 'Edit';
+  div.appendChild(button);
+  todoList.appendChild(div);
 };
 
 const resetInput = () => {
-  input.value = "";
+  input.value = '';
 };
 
-addTodoBtn.addEventListener("click", e => {
-  const value1 = input.value;
-  addTodo(value1);
+addTodoBtn.addEventListener('click', e => {
+  addTodo(input.value);
+  console.log(input.value)
   resetInput();
 });
 
-input.addEventListener("keydown", e => {
-  if (e.key === "Enter") {
+input.addEventListener('keydown', e => {
+  if (e.key === 'Enter') {
     const value = input.value;
     addTodo(value);
     resetInput();
@@ -30,28 +43,32 @@ input.addEventListener("keydown", e => {
 const todoListData = [
   {
     id: 1,
-    content: "Hoc Javascript",
+    content: 'Hoc Javascript',
   },
   {
     id: 2,
-    content: "Hoc React",
+    content: 'Hoc React',
   },
   {
     id: 3,
-    content: "Hoc lam viec nha",
+    content: 'Hoc lam viec nha',
   },
 ];
+for (let i = 0; i < todoListData.length; i++) {
+   addTodo(todoListData[i].content);
 
 
-editTodoBtn.addEventListener("click", e => {
-  const el = document.querySelector("p");
-  const addInputEdit = document.querySelectorAll("#addInput");
-  console.log(addInputEdit);
+}
 
-  el.classList.toggle("hidden");
-  addInputEdit.classList.toggle("hidden");
-  addInputEdit.value = el.innerText;
-});
+// editTodoBtn.addEventListener("click", e => {
+//   const el = document.querySelector("p");
+//   const addInputEdit = document.querySelectorAll("#addInput");
+//   console.log(addInputEdit);
+
+//   el.classList.toggle("hidden");
+//   addInputEdit.classList.toggle("hidden");
+//   addInputEdit.value = el.innerText;
+// });
 
 /* 
 1. DOM input
