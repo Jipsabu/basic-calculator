@@ -1,3 +1,5 @@
+import "./function.js";
+
 const todoList = document.querySelector('#list');
 const input = document.querySelector('#addTodoInput');
 const addTodoBtn = document.querySelector('.addBtn');
